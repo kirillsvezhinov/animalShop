@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="nav-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-xs-3 logo">
+                    <img src="./img/logo.jpg" alt="">
+                </div>
+                <div class="col-md-5 offset-3  col-xs-5 col-xs-offset-1">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                        <a class="nav-link active" href="#">Мы</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <section class="item">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 photos">
+                    <div class="image-wrapper">
+                        <img class="mainImg" src="./img/cat.jpg" alt="">
+                    </div>
+                    <div class="images">
+                        <img class="img"  src="./img/all.jpg" alt="">
+                        <img class="img"  src="./img/blue.jpg" alt="">
+                        <img class="img"  src="./img/silver.jpg" alt="">
+                        <img class="img"  src="./img/cat3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="itemSelect">
+                        <div class="distr">
+                            <div class="title">🐾 FloppyFish™ Realistic Cat Toy</div>
+                            <div class="price">20$</div>
+                            <div class="ship"><span>&#128666;</span> Бесплатная доставка</div>
+                            <div class="ship_dist">В любую точку России</div>
+                        </div>
+    
+                        <form action="">
+                            <div>
+                                <div class="option_title">📦 Выберете товар</div>
+                                <select name="type-fish" id="fish">
+                                    <option data-src="./img/silverUsb.jpg" value="silver">silver (cost)</option>
+                                    <option data-src="./img/blueUsb.jpg" value="blue">blue (cost)</option>
+                                    <option data-src="./img/yellowUsb.jpg" value="yellow">yellow (cost)</option>
+    
+                                </select>
+                            </div>
+                            <div>
+                                <div class="option_title">✅ Количество</div>
+                                <input type="number" id="Quantity-product-template" class="count" name="quantity" value="1" min="1" pattern="[0-9]*" class="product-form__input product-form__input--quantity" data-quantity-input=""><span id="nullingInput"></span>
+                            </div>
+                            <button type="button" id="mainBtn" class="btn btn-success btn-lg btn-block">Оформить заказ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages_title"> HIGHLIGHTS</div>
+            <div class="row">
+                <div class="col-md-6">
+                 
+                        <div class="advantages_subtitle">Relieves Stress & Boredom</div>
+
+                        <div class="advantages_text">Our cats get bored and stressed, too, which causes bad behaviour and health issues. FloppyFish™ with its lifelike design makes your cat feel like she’s hunting a real fish while honing her motoric skills, eliminating boredom, and reducing stress.</div>
+                        <div class="advantages_subtitle">🐾 Keeps Your Cat Active & Fit</div>
+                        <div class="advantages_text">Eat, sleep, and poop - this is the daily schedule for most cats, resulting in weight and health issues. Keep your kitten active and healthy with FloppyFish™.</div>
+                        <div class="advantages_subtitle">🐾 Automatic Flopping</div>
+                        <div class="advantages_text">The FloppyFish™ starts moving as soon as the cat touches it. It’s perfect for venting your cat's natural hunting instinct and for having lots of fun at the same time. When left alone, the fish stops moving to save power for the next playtime session.</div>
+                        <div class="advantages_subtitle">🐾 Easy USB Charging </div>
+                        <div class="advantages_text">  The FloppyFish™ features an easy USB Charging feature so you can charge it from your phone charger, computer, console, etc!</div>
+                        <div class="advantages_subtitle">🐾 Integrated Catnip Pouch</div>
+                        <div class="advantages_text">The FloppyFish™ has a catnip pouch to make your cat love the toy even more and ensures that catnip stays inside even for the most intense sessions.</div>
+
+
+                        <div class="advantages_subtitle">🐾 Safe & Durable</div>
+                        <div class="advantages_text">
+                            This kitty toy is made of durable cotton plush, which is safe and non-toxic for your kitten.</div>
+                       
+                </div>
+                <div class="col-md-6">
+                    <img class="endImg" src="./img/cat4.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>   
+    <div class="overlay">
+        <form class="submitForm">
+            <div class="titleForm">Оформление заказа</div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Имя</label>
+                <input type="text" name="nameUser" class="form-control" id="" placeholder="Укажите имя" required>
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Почта</label>
+              <input type="email" name="emailUser" class="form-control" placeholder="Укажите почту" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Телефон</label>
+              <input type="number" name="phoneUser" class="form-control" id="exampleInputPassword1" placeholder="Укажите мобильный телефон" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Товар</label>
+               <div>
+                <select class="form-control" id="inputType">
+                    <option>silver</option>
+                    <option>blue</option>
+                    <option>yellow</option>
+                
+                  </select>
+               </div>
+              </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">Количество</label>
+                <input type="text" name="itemCount" class="form-control" id="inputCount"  required>
+            </div>
+            
+            <button type="submit" id="btnPost" class="btn btn-success">Оставить заявку</button>
+          </form>
+
+    </div> 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+    
+</body>
+</html>
