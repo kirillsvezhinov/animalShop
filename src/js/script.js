@@ -57,6 +57,7 @@ window.addEventListener('DOMContentLoaded',() =>{
             if(e.target == overlay){
                 overlay.classList.remove('show')
                 body.style.overflow=''
+                window.location.reload();
                 
             }
         })
