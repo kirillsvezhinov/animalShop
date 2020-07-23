@@ -1,24 +1,51 @@
 window.addEventListener('DOMContentLoaded',() =>{
-
     function imagesSwap(){
         let mainImg = document.querySelector('.mainImg')
-        let images = document.querySelectorAll('.images')
+        let imagesList = document.querySelectorAll('.images')
         let list = document.querySelector('#fish')
         list.addEventListener('change',(e) =>{
             let src = event.target.options[event.target.selectedIndex].dataset.src;
+            clearInterval(int)
             mainImg.src = src
         })
-        images.forEach(item =>{
+        imagesList.forEach(item =>{
             item.addEventListener('click', (e)=>{
                     if(e.target.classList.contains('img')){
                         mainImg.src = e.target.src
                     }
-                  
                
             })
         })
+        let step = 0;
+        let images = document.querySelectorAll('.img')
+        function slide(){
+            if(step == images.length){
+                step=0;
+            }
+            deleteActive();
+            images[step].classList.add('active')
+            mainImg.src = images[step].src
+            step++;
+        }
         
+        let int = setInterval(slide,5000)
 
+        mainImg.addEventListener('click', () =>{
+            clearInterval(int)
+        })
+        images.forEach(element => {
+            element.addEventListener('click',() =>{
+              clearInterval(int)
+            })
+        });
+
+        function deleteActive(){
+            images.forEach(element =>{
+                if(element.classList.contains('active')){
+                    element.classList.remove('active')
+                }
+            })
+        }
     }
     imagesSwap();
     function overlayUp(){
@@ -69,9 +96,20 @@ window.addEventListener('DOMContentLoaded',() =>{
         });
     }
     overlayUp();
+/*     function validatePhone(){
+        let phone = document.getElementById('inputPhone')
+        let errorMessage = document.createElement('div')
+        errorMessage.textContent = `Не правильно введен номер`
+        if(phone.length != 11){
+            phone.append(errorMessage);
+        }else{
+            errorMessage.remove();
+        }
+        
+    } */
 
     function postForm(e){
-
+        
         const message = {
             loading: 'img/form/spiner.svg',
             success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -108,4 +146,9 @@ window.addEventListener('DOMContentLoaded',() =>{
         })
         return await res.json();
     }
+
+    ////slider
+    
+
+    
 })

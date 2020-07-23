@@ -41,6 +41,10 @@
                         <img class="img"  src="./img/blue.jpg" alt="">
                         <img class="img"  src="./img/silver.jpg" alt="">
                         <img class="img"  src="./img/cat3.jpg" alt="">
+                        <img class="img" src="./img/silverUsb.jpg" alt="">
+                        <img class="img" src="./img/blueUsb.jpg" alt="">
+                        <img class="img" src="./img/yellowUsb.jpg" alt="">
+                        <img class='img' src="./img/beige.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -59,6 +63,7 @@
                                     <option data-src="./img/silverUsb.jpg" value="silver">silver (cost)</option>
                                     <option data-src="./img/blueUsb.jpg" value="blue">blue (cost)</option>
                                     <option data-src="./img/yellowUsb.jpg" value="yellow">yellow (cost)</option>
+                                    <option data-src="./img/beige.jpg" value="yellow">beige (cost)</option>
     
                                 </select>
                             </div>
@@ -79,37 +84,33 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2 col-lg-offset-3">
                         <div class="advantages_block">
-                        <div class="advantages_subtitle">🐾 Снимает стресс и скуку</div>
+                        <div class="advantages_subtitle">✅ Снимает стресс и скуку</div>
                         <div class="advantages_text">Наши кошки тоже скучают и испытывают стресс, что вызывает плохое поведение и проблемы со здоровьем. FloppyFish ™ с его реалистичным дизайном дает вашей кошке ощущение, что она охотится на настоящую рыбу, оттачивая свои навыки, устраняя скуку и снижая стресс.</div>
                         </div>
                         <div class="advantages_block">
-                            <div class="advantages_subtitle">🐾 Дизайн</div>
+                            <div class="advantages_subtitle">✅ Дизайн</div>
                         <div class="advantages_text">Дизайн в форме рыбы исходит из природы кошек. Блогодаря реалистиному дизайну, игрушка привлекает внимание кошек на продолжительный срок.</div>
                         </div>
                         <div class="advantages_block">
-                            <div class="advantages_subtitle">🐾 Движение</div>
+                            <div class="advantages_subtitle">✅ Движение</div>
                         <div class="advantages_text">Игрушка начинает двигаться, как только кошка коснется его. Она идеально подходит для того, чтобы избавиться от естественного охотничьего инстинкта вашей кошки и в то же время весело провести время. Оставшись в одиночестве, рыба перестает двигаться, чтобы сэкономить энергию для следующего сеанса игры.</div>
                         </div>
                         <div class="advantages_block">
-                            <div class="advantages_subtitle">🐾 Зарядка </div>
+                            <div class="advantages_subtitle">✅ Зарядка </div>
                         <div class="advantages_text">  Игрушка заряжается от обычной USB-зарядки.</div>
                         </div>
                        <div class="advantages_block">
-                        <div class="advantages_subtitle">🐾 Кошачий кошелек</div>
+                        <div class="advantages_subtitle">✅ Кошачий кошелек</div>
                         <div class="advantages_text">Игрушка имеет мешочек для кошачьей мяты, чтобы ваша кошка любила игрушку еще больше.</div>
 
                        </div>
                        <div class="advantages_block">
-                        <div class="advantages_subtitle">🐾 Материал</div>
+                        <div class="advantages_subtitle">✅ Материал</div>
                         <div class="advantages_text">Игрушка изготовлена из мягкой текстуры и не повредит лапу кошки. Отлично подходит для кусания, жевания и сна.</div>
 
                        </div>
 
-                      <div class="advantages_block">
-                        <div class="advantages_subtitle">🐾 Safe & Durable</div>
-                        <div class="advantages_text">
-                            This kitty toy is made of durable cotton plush, which is safe and non-toxic for your kitten.</div>
-                      </div>
+                       
                        
                 </div>
             </div>
@@ -128,7 +129,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Телефон</label>
-              <input type="number" name="phoneUser" class="form-control" id="exampleInputPassword1" placeholder="Укажите мобильный телефон" required>
+              <input type="phone"name="phoneUser" class="form-control" id="inputPhone" minlength="11"  maxlength="11"  placeholder="Укажите мобильный телефон" onblur="validatePhone()" onkeyup="this.value = this.value.replace (/\D/gi, '').replace (/^0+/, '')" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Товар</label>
@@ -144,7 +145,7 @@
             
             <div class="form-group">
                 <label for="exampleInputPassword1">Количество</label>
-                <input type="text" name="itemCount" class="form-control" id="inputCount"  required>
+                <input type="number" name="itemCount" class="form-control" id="inputCount"  required>
             </div>
             
             <button type="submit" id="btnPost" class="btn btn-success">Оставить заявку</button>
